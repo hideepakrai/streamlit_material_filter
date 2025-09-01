@@ -1,0 +1,64 @@
+[[pages]]
+path = "app.py"
+name = "🏠 Home"
+icon = "🏠"
+
+# ── Admin Section ────────────────────────
+[[pages]]
+path = "pages/Admin_Rebuild_Indexes.py"
+name = "⚙️ Rebuild Indexes"
+icon = "🛠️"
+section = "Admin"
+
+[[pages]]
+path = "pages/Duplicate_Materials.py"
+name = "🌀 Duplicate Materials"
+section = "Admin"
+
+# ── Job Section ──────────────────────────
+[[pages]]
+path = "pages/Job_Area_Materials.py"
+name = "📌 Job Area"
+section = "Jobs"
+
+[[pages]]
+path = "pages/Job_Option_Area.py"
+name = "📋 Job Options"
+section = "Jobs"
+
+# ── Materials Section ────────────────────
+[[pages]]
+path = "pages/Materials.py"
+name = "📦 Materials"
+section = "Materials"
+
+[[pages]]
+path = "pages/Material_Options.py"
+name = "⚡ Material Options"
+section = "Materials"
+
+[[pages]]
+path = "pages/Unused_Materials.py"
+name = "🗑️ Unused Materials"
+section = "Materials"
+
+# ── Projects Section ─────────────────────
+[[pages]]
+path = "pages/Project Elevation MaterialId.py"
+name = "🏗️ Elevation Material ID"
+section = "Projects"
+
+[[pages]]
+path = "pages/Project_view_materialID.py"
+name = "🔍 Project View (materialID)"
+section = "Projects"
+
+[[pages]]
+path = "pages/Project_Views.py"
+name = "📐 Project Views"
+section = "Projects"
+
+[[pages]]
+path = "pages/Tmp_Project_Elevations.py"
+name = "🧪 Temp Project Elevations"
+section = "Projects"
