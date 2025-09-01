@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+
+# --- Environments ---
+.venv/
+venv/
+.env
+.env.*
+.conda/
+
+# --- Notebooks/Cache/Coverage ---
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Streamlit (keep secrets out of git) ---
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# --- OS/IDE ---
+.DS_Store
+.vscode/
+.idea/
