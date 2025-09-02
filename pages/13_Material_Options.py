@@ -5,6 +5,7 @@ from lib.db import get_engine
 
 st.set_page_config(page_title="Material Options - Usage", page_icon="🎨", layout="wide")
 st.title("🎨 Material Options - Usage")
+st.markdown("Tables used = materials_option + materials")
 
 engine = get_engine()
 
@@ -86,3 +87,14 @@ st.dataframe(
     },
     
 )
+
+
+st.markdown("""SELECT 
+        m.photo,
+        mo.material_id,
+        COUNT(*) AS count,
+        GROUP_CONCAT(mo.id ORDER BY mo.id) AS material_option_ids
+    FROM material_options mo
+    LEFT JOIN materials m
+        ON m.id = mo.material_id
+    WHERE mo.material_id IS NOT NULL""")

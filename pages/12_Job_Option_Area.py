@@ -5,6 +5,7 @@ from lib.db import get_engine
 
 st.set_page_config(page_title="Job Area Materials - Usage", page_icon="🎨", layout="wide")
 st.title("🎨 Job Area Materials - Usage")
+st.markdown("Tables used = materials + job_area_materials")
 
 engine = get_engine()
 

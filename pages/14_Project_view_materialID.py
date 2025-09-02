@@ -5,6 +5,8 @@ from lib.db import get_engine
 
 st.set_page_config(page_title="Project Views - Material Usage", page_icon="📐", layout="wide")
 st.title("📐 Project Views - Material Usage")
+st.markdown("Project View with Materials id listing in an comma seprated project_view_ids")
+
 
 engine = get_engine()
 
@@ -87,3 +89,19 @@ st.dataframe(
                 "photo": st.column_config.ImageColumn("Photo", width="small")
             },
 )
+
+
+st.markdown("""SELECT
+        m.photo, 
+        jt.material_id,
+        COUNT(*) AS count,
+        GROUP_CONCAT(DISTINCT pv.id ORDER BY pv.id) AS project_view_ids
+    FROM project_views pv
+    JOIN JSON_TABLE(
+        pv.existing_material_ids,
+        '$[*]' COLUMNS (material_id VARCHAR(50) PATH '$')
+    ) jt
+    LEFT JOIN materials m
+    on jt.material_id=m.id
+    WHERE pv.existing_material_ids IS NOT NULL
+      AND JSON_VALID(pv.existing_material_ids)""")
